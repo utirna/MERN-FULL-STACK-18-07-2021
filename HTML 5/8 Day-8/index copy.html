@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="user_name">Name</label>
+        <input type="text" id="user_name" />
+      </div>
+
+      <div>
+        <label for="user_roll_number">Roll</label>
+        <input type="number" id="user_roll_number" />
+      </div>
+      <div>
+        <label for="">Gender</label>
+        <div>
+          <label for="user_male">Male</label>
+          <input type="radio" id="user_male" value="male" />
+          <!-- female -->
+          <label for="user_female">Female</label>
+          <input type="radio" id="user_female" value="female" />
+          <!-- other -->
+          <label for="user_other">Other</label>
+          <input type="radio" id="user_other" value="other" />
+        </div>
+      </div>
+      <div>
+        <label for="">Topics</label>
+        <div>
+          <label for="HTML5">HTML5</label>
+          <input
+            type="checkbox"
+            id="HTML5"
+            name="topics_html"
+            value="html5"
+            checked
+            disabled
+          />
+        </div>
+        <div>
+          <label for="css">CSS3</label>
+          <input type="checkbox" id="css" name="topics_css"" value="css3"/>
+        </div>
+
+        <div>
+          <label for="Javascript">Javascript</label>
+          <input type="checkbox" id="Javascript" name="topics_js" value="js" />
+        </div>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
