@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-28</title>
+    <link
+      rel="stylesheet"
+      href="asstes/plugin/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* desktop */
+      .main {
+        width: 100vw;
+        height: 50vh;
+        background-color: lightcoral;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .main > section {
+        width: 25vw;
+        border: 3px solid black;
+      }
+
+      /* tablet */
+      @media screen and (max-width: 800px) {
+        .main > section {
+          width: 50vw;
+        }
+      }
+
+      /* mobile */
+
+      @media screen and (max-width: 500px) {
+        .main > section {
+          width: 100vw;
+        }
+        .section-four {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <section class="section-one">S1</section>
+      <section class="section-two">S2</section>
+      <section class="section-three">S3</section>
+      <section class="section-four">Add</section>
+    </section>
+  </body>
+</html>

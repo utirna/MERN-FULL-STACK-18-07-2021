@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-15</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .grand-parent {
+        margin-top: 40px;
+        width: 60%;
+        height: 60vh;
+        border: 2px solid red;
+        position: relative;
+      }
+
+      .parent {
+        margin-top: 20px;
+        width: 70%;
+        height: 40vh;
+        border: 2px solid green;
+        /* position: relative; */
+      }
+
+      .child-1 {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: violet;
+        position: absolute;
+        border: 2px double black;
+        /* right: 0; */
+        /* top: 0; */
+        /* right: 0; */
+        top: -10px;
+        right: -10px;
+      }
+      .child-2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: violet;
+        position: absolute;
+        border: 2px double black;
+        bottom: -10px;
+        right: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="grand-parent">
+      <section class="parent">
+        <section class="child-1"></section>
+        <section class="child-2"></section>
+      </section>
+    </section>
+  </body>
+</html>

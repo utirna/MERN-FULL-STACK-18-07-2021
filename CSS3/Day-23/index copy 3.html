@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+      ul > li {
+        text-align: center;
+        padding: 10px 0;
+        border: 1px solid violet;
+        /* margin: 0.2rem; */
+      }
+
+      /* ul > li:first-child {
+        background-color: violet;
+      }
+      ul > li:last-child {
+        background-color: greenyellow;
+      } */
+
+      ul > li:nth-child(odd) {
+        background-color: violet;
+      }
+      ul > li:nth-child(even) {
+        background-color: green;
+      }
+
+      ul > li:first-child,
+      ul > li:last-child {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Team</li>
+      <li>Project</li>
+      <li>Contact</li>
+      <li>Home</li>
+      <li>About</li>
+      <li>Team</li>
+      <li>Project</li>
+      <li>Contact</li>
+      <li>Home</li>
+      <li>About</li>
+      <li>Team</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+  </body>
+</html>

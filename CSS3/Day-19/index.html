@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-19</title>
+    <style>
+      body {
+        background-color: green;
+      }
+      .block {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        border-radius: 100px;
+        animation-name: moveBlock;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+      }
+      .block img {
+        width: inherit;
+        height: inherit;
+      }
+
+      @keyframes moveBlock {
+        0% {
+          transform: translateY(0px) rotateZ(0deg);
+        }
+
+        100% {
+          transform: translateY(300px) rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <img src="image/football.png" alt="" srcset="" />
+    </div>
+  </body>
+</html>

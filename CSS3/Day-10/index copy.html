@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-10</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .inline-block {
+        border: 1px solid;
+        margin: 0;
+        width: 25%;
+        height: 100px;
+        padding: 10px;
+        display: inline-block;
+      }
+
+      .set-block-margin-issue {
+        margin-left: -4px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inline-block">HELLO</div>
+    <div class="inline-block set-block-margin-issue">HELLO</div>
+    <div class="inline-block set-block-margin-issue">HELLO</div>
+    <div class="inline-block set-block-margin-issue">HELLO</div>
+  </body>
+</html>

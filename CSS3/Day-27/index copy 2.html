@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <link
+      rel="stylesheet"
+      href="asstes/plugin/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .tool-tip {
+        text-decoration: underline dotted;
+        cursor: pointer;
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tool-tip::before,
+      .tool-tip::after {
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .tool-tip::before {
+        content: attr(data-text);
+        width: 110px;
+        text-align: center;
+        padding: 2px 5px;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        position: absolute;
+        z-index: 2;
+        bottom: 110%;
+      }
+
+      .tool-tip::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border: 0.5rem solid;
+        position: absolute;
+        bottom: 40%;
+        border-color: black transparent transparent transparent;
+      }
+
+      .tool-tip:hover::before,
+      .tool-tip:hover::after {
+        opacity: 1;
+      }
+
+      /* .arrow {
+        width: 0px;
+        height: 0px;
+        border: 0.5rem solid;
+        border-color: black transparent transparent transparent;
+      } */
+    </style>
+  </head>
+  <body>
+    <p>
+      Google Chrome is a
+      <span class="tool-tip" data-text="Mac,Window, linux">cross-platform</span>
+      web browser developed by
+      <span class="tool-tip" data-text="Search Engine">Google</span>. It was
+      first released in 2008 for Microsoft Windows, built with free software
+      components from Apple WebKit and Mozilla Firefox. It was later ported to
+      Linux, macOS, iOS, and Android, where it is the
+      <span class="tool-tip" data-text="Chrome">default</span>
+      browser
+    </p>
+    <div class="arrow"></div>
+  </body>
+</html>

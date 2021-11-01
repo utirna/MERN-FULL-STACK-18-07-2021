@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .input-control {
+        border: 1px solid;
+        border-radius: 0px 10px 10px 10px;
+        padding: 0.1rem 0.5rem;
+        outline: 0;
+      }
+      .input-control[type="text"]:read-only {
+        cursor: copy;
+      }
+
+      .input-control[type="text"]:disabled {
+        border-color: gray;
+        cursor: not-allowed;
+      }
+
+      /* 
+      button:disabled {
+        border-color: gray;
+        cursor: not-allowed;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" class="input-control" required readonly />
+    </div>
+    <div>
+      <input type="text" class="input-control" required />
+    </div>
+    <!-- <button disabled>CLICK</button> -->
+  </body>
+</html>

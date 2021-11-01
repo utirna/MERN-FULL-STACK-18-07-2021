@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <style>
+      @font-face {
+        font-family: "primary-font";
+        src: url(./asstes/fonts/festive/Festive-Regular.ttf);
+      }
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p::before {
+        content: "1st";
+        color: red;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      p::after {
+        content: "2nd";
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">Lorem ipsum dolor sit.</p>
+  </body>
+</html>

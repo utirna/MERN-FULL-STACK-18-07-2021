@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <link
+      rel="stylesheet"
+      href="asstes/plugin/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .text-red {
+        color: darkred;
+        margin-right: 2px;
+      }
+      .text-green {
+        color: green;
+      }
+      .btn {
+        border: 1px solid darkmagenta;
+        background-color: white;
+        color: darkmagenta;
+      }
+      .download-icon::after {
+        content: "\f019";
+        font-family: FontAwesome;
+        margin-left: 2px;
+        color: green;
+      }
+      a{
+        text-decoration: none;
+      }
+      a::after{
+        content: "\f08e";
+        font-family: FontAwesome;
+      }
+
+      a[href$=".pdf"]::after{
+        content: "\f1c1";
+        color: red;
+      }
+
+      a[href$=".doc"]::after{
+        content: "\f1c2";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <a href="/download/chrome" > Google Chrome </a> is a cross-platform web browser developed by Google
+      <a href="/download/home/sample.pdf"></span></a>. It was first
+      released in 2008 for Microsoft Windows, built with free software
+      components from Apple WebKit and Mozilla Firefox. It was later ported to
+      Linux, macOS, iOS, and Android, where it is the default browser <a href="/sample.doc"></a>
+    </p>
+    <button class="btn download-icon">Download</button>
+  </body>
+</html>

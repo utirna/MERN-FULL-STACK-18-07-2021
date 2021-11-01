@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-16</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        height: 200vh;
+      }
+      .grand-parent {
+        margin-top: 40px;
+        width: 60%;
+        height: 60vh;
+        border: 2px solid red;
+        position: relative;
+      }
+
+      .parent {
+        margin-top: 20px;
+        width: 70%;
+        height: 40vh;
+        border: 2px solid green;
+      }
+
+      .child-1 {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: violet;
+        position: absolute;
+        border: 2px double black;
+
+        top: -10px;
+        right: -10px;
+      }
+      .child-2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: violet;
+        position: absolute;
+        border: 2px double black;
+        bottom: -10px;
+        right: -10px;
+      }
+      .child-3-fixed {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(46, 3, 46);
+        border: 2px double black;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+      }
+      .feedback-fixed {
+        position: fixed;
+        right: 10px;
+        top: 40%;
+      }
+
+      .feedback-fixed > .feedback-relative {
+        position: relative;
+        padding: 5px 20px;
+        background-color: #313331;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .feedback-fixed > .feedback-relative > .feedback-btn {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: red;
+        border-color: orange;
+      }
+      .feedback-fixed > .feedback-relative > .feedback-text {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="feedback-text">abc</p>
+    <section class="feedback-fixed">
+      <section class="feedback-relative">
+        <button class="feedback-btn">x</button>
+        <p class="feedback-text">Feedback</p>
+      </section>
+    </section>
+    <section class="grand-parent">
+      <section class="parent">
+        <section class="child-1"></section>
+        <section class="child-2"></section>
+        <section class="child-3-fixed">Up</section>
+      </section>
+    </section>
+  </body>
+</html>

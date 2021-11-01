@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .block-p {
+        height: 25vh;
+        width: 25vw;
+        border: 1px solid;
+      }
+      .block {
+        height: inherit;
+        width: inherit;
+        border: 1px solid;
+        background-color: red;
+        transition: transform 0.5s;
+        transform: perspective(500px);
+        transform-origin: left;
+      }
+
+      .block:hover {
+        transform: perspective(500px) rotateY(-40deg);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="block-p">
+      <section class="block">
+        <span>Hello</span>
+      </section>
+    </section>
+  </body>
+</html>

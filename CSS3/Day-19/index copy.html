@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-19</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding-inline-start: 0;
+      }
+      .nav-bar {
+        display: flex;
+        padding: 0.5rem 1rem;
+        border-bottom: 2px solid violet;
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        padding: 0 0.4rem;
+      }
+
+      .menu-items {
+        border: 1px solid;
+        margin: 0 0.5rem 0 0;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: capitalize;
+        transition-property: background-color, color, box-shadow, transform;
+        transition-duration: 0.5s;
+      }
+
+      .menu-items:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0px 0px 15px violet;
+        transform: translateY(2px);
+      }
+      .cards {
+        width: 100vw;
+        border-bottom: 2px solid violet;
+        height: 40vh;
+        padding: 1rem;
+        display: flex;
+
+        justify-content: space-evenly;
+      }
+      .card {
+        width: 25vw;
+        height: 35vh;
+        overflow: hidden;
+        position: relative;
+
+        /* border: 1px solid; */
+      }
+      .child-1 {
+        width: inherit;
+        height: inherit;
+        border: 1px solid;
+        border-radius: 5px;
+      }
+      .child-2 {
+        width: 100%;
+        height: 10vh;
+        background-color: green;
+        position: relative;
+        transition: transform 0.5s;
+        cursor: pointer;
+      }
+      .card:hover .child-2 {
+        transform: translateY(-10vh);
+      }
+      .child-3 {
+        padding: 1px 1.4rem;
+        background-color: violet;
+        border-top: 2px dotted green;
+        border-bottom: 2px dotted green;
+        position: absolute;
+        top: 10px;
+        right: -20px;
+        transform: rotateZ(45deg);
+        font-size: 0.8rem;
+        box-shadow: 0px 4px 5px rgba(128, 128, 128, 0.61);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul class="menu">
+        <li class="menu-items">home</li>
+        <li class="menu-items">About</li>
+        <li class="menu-items">Contact</li>
+        <li class="menu-items">Our team</li>
+      </ul>
+    </nav>
+    <main class="cards">
+      <section class="card">
+        <article class="child-3">20% off</article>
+        <article class="child-1">New T-Shirts</article>
+        <article class="child-2">Click to Subscribe</article>
+      </section>
+      <section class="card">
+        <article class="child-3">20% off</article>
+        <article class="child-1">New T-Shirts</article>
+        <article class="child-2">Click to Subscribe</article>
+      </section>
+      <section class="card">
+        <article class="child-3">20% off</article>
+        <article class="child-1">New T-Shirts</article>
+        <article class="child-2">Click to Subscribe</article>
+      </section>
+    </main>
+  </body>
+</html>

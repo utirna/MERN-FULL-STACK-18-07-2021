@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-17</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "popup-text-font";
+        src: url(./font/Roboto/Roboto-Regular.ttf);
+      }
+
+      html {
+        font-size: 15px;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .popup {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.671);
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        font-family: popup-text-font;
+      }
+      .popup > .popup-add {
+        width: 60%;
+        height: 50vh;
+        background-color: rgb(179, 247, 247);
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 70px;
+        position: relative;
+      }
+      .popup > .popup-add > .popup-add-title {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 0.8rem 0;
+      }
+      .popup > .popup-add > .popup-add-offer {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        text-align: left;
+      }
+      .popup > .popup-add > .popup-add-offer > span {
+        color: rgb(204, 14, 204);
+      }
+      .popup > .popup-add > .popup-add-offer-text {
+        font-size: 0.9rem;
+        text-align: left;
+        width: 100%;
+        padding-bottom: 0.8rem;
+        font-weight: bold;
+        /* flex-basis: 100%; */
+      }
+      .popup > .popup-add > .popup-add-offer-text > span {
+        background-color: black;
+        padding: 0.5rem;
+        color: white;
+      }
+
+      .shift-right {
+        margin-left: 1rem;
+      }
+      .popup > .popup-add > .popup-add-email-input {
+        margin: 0.5rem 0;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        border: 0;
+        outline: 0;
+      }
+      .popup > .popup-add > .popup-add-form-btn-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .popup > .popup-add > .popup-add-form-btn-group > .btn {
+        width: 49%;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border: 1px solid black;
+        margin: 0.5rem 0;
+      }
+      .popup > .popup-add > .popup-add-form-btn-group > .btn-submit {
+        background-color: black;
+        color: white;
+      }
+      .popup > .popup-add > .popup-add-form-btn-group > .btn-cancel {
+        background-color: transparent;
+      }
+      .popup > .popup-add > .popup-add-t-c-text {
+        font-size: 0.7rem;
+        text-align: left;
+        /* width: 100%; */
+        position: absolute;
+        bottom: 10px;
+        left: 70px;
+      }
+      .popup > .popup-add > .popup-add-close-btn {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: gray;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .set-pointer {
+        cursor: pointer;
+      }
+      .disable-popup {
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="popup flex disable-popup">
+      <section class="popup-add flex">
+        <h4 class="popup-add-title">Me Undies</h4>
+        <p class="popup-add-offer">
+          Your <span> 15% off</span> expires soon...
+        </p>
+        <p class="popup-add-offer-text">
+          Sign up and save:
+          <span class="shift-right">29</span>
+          <span>03</span>
+        </p>
+        <input
+          type="text"
+          class="popup-add-email-input"
+          placeholder="Enter your email"
+        />
+
+        <div class="popup-add-form-btn-group flex">
+          <button class="btn btn-submit set-pointer">Get 15% Off</button>
+          <button class="btn btn-cancel set-pointer">No Thanks</button>
+        </div>
+        <p class="popup-add-t-c-text">Note*: T&C Apply</p>
+        <button class="popup-add-close-btn set-pointer">X</button>
+      </section>
+    </section>
+    <section>
+      <h1>This is sample page</h1>
+    </section>
+  </body>
+</html>

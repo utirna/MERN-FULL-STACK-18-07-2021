@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .articles-topics {
+        counter-reset: topicCounter;
+      }
+      .topic {
+        padding: 1rem;
+        counter-reset: pCounter;
+      }
+      .topic .topic-name {
+        display: flex;
+        align-items: center;
+      }
+      .topic .topic-name::before {
+        counter-increment: topicCounter;
+        content: counter(topicCounter);
+        width: 15px;
+        height: 15px;
+        padding: 0.2rem;
+        text-align: center;
+        margin-right: 0.2rem;
+        border: 1px solid red;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .topic .topic-name {
+        text-transform: uppercase;
+      }
+      .topic .topic-content {
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        display: flex;
+      }
+
+      .topic .topic-content::before {
+        counter-increment: pCounter;
+        content: counter(pCounter) "]";
+        padding: 0.2rem;
+        text-align: center;
+        margin-right: 0.2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+      }
+      /* .block {
+        counter-reset: number;
+      } */
+      /* p {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0rem;
+      }
+      p::before {
+        counter-increment: number;
+        content: counter(number);
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+        text-align: center;
+      } */
+    </style>
+  </head>
+  <body>
+    <article class="articles-topics">
+      <div class="topic">
+        <h4 class="topic-name">Topic</h4>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+      </div>
+      <div class="topic">
+        <h4 class="topic-name">Topic</h4>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+      </div>
+      <div class="topic">
+        <h4 class="topic-name">Topic</h4>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+      </div>
+      <div class="topic">
+        <h4 class="topic-name">Topic</h4>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+        <p class="topic-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+          molestiae ipsam fugit reprehenderit sunt voluptate, asperiores non
+          aperiam nihil ipsa sit numquam, sapiente fuga praesentium? Doloremque
+          voluptatibus illum laborum neque.
+        </p>
+      </div>
+    </article>
+  </body>
+</html>

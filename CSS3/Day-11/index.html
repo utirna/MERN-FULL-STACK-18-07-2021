@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .bg-color-one {
+        background-color: palevioletred;
+      }
+      .bg-color-two {
+        background-color: rgb(129, 216, 112);
+      }
+      .menu {
+        padding: 0;
+        padding: 5px 0px;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: flex-start;
+        align-content: flex-start;
+      }
+      .menu-active {
+        border-bottom: 3px solid green !important;
+        border-radius: 5px 5px 0px 0px;
+      }
+      .menu-item {
+        padding: 2px 15px;
+        margin: 0px 5px;
+        background-color: white;
+        color: rgb(37, 37, 85);
+        margin: 5px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <nav>
+          <ul class="menu bg-color-one">
+            <li class="menu-item">home</li>
+            <li class="menu-item menu-active">team</li>
+            <li class="menu-item">project</li>
+            <li class="menu-item">contact-us</li>
+          </ul>
+        </nav>
+      </header>
+
+      <footer>
+        <nav>
+          <ul class="menu bg-color-two">
+            <li class="menu-item">home</li>
+            <li class="menu-item menu-active">team</li>
+            <li class="menu-item">project</li>
+            <li class="menu-item">contact-us</li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

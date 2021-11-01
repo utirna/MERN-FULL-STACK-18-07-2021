@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-28</title>
+    <link
+      rel="stylesheet"
+      href="asstes/plugin/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* desktop */
+      .block {
+        height: 25vh;
+        background-color: red;
+      }
+
+      /* mobile */
+      @media screen and (max-width: 500px) and (min-width: 0px) {
+        .block {
+          background-color: pink;
+        }
+      }
+
+      /* table */
+      @media screen and (max-width: 700px) and (min-width: 501px) {
+        .block {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="block"></section>
+  </body>
+</html>

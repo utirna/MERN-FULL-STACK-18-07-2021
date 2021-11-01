@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-22</title>
+    <style>
+      @font-face {
+        font-family: "primary-font";
+        src: url(./asstes/fonts/festive/Festive-Regular.ttf);
+      }
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        border: 0.5px solid darkmagenta;
+        outline: 0;
+
+        padding: 5px 30px;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        position: relative;
+        /* overflow: hidden; */
+        border-radius: 30px;
+        background-color: transparent;
+        transition: color 1s;
+      }
+
+      .btn::before {
+        content: "";
+        background-color: blueviolet;
+        width: 125px;
+        height: 45px;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        transform: translateX(-125px) skewX(-15deg);
+        transition: transform 1s;
+        /* transition-timing-function: cubic-bezier(0.18, 1.38, 0.64, 0.41); */
+        z-index: -1;
+      }
+      .btn:hover::before {
+        transform: translateX(0px) skewX(-15deg);
+      }
+      .btn:hover {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">CLICK</button>
+  </body>
+</html>

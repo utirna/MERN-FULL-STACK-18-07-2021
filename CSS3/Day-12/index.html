@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .main-timer {
+        width: 50%;
+        padding: 10px;
+        height: 20vh;
+        background-color: red;
+      }
+      .main-timer-item {
+        flex-basis: 25%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-timer-item p {
+        color: white;
+        font-size: 1.5em;
+        padding: 0px;
+        text-transform: uppercase;
+      }
+      .main-timer-item .timer-day-number {
+        font-size: 2.5em;
+      }
+      .set-left-border {
+        border-left: 1px solid white;
+      }
+
+      .d-flex {
+        display: flex !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main-timer d-flex">
+      <!-- day section -->
+      <section class="main-timer-item d-flex">
+        <p>days</p>
+        <p class="timer-day-number">10</p>
+      </section>
+      <!-- hrs section -->
+      <section class="main-timer-item set-left-border d-flex">
+        <p>hrs</p>
+        <p class="timer-day-number">10</p>
+      </section>
+      <!-- min section -->
+      <section class="main-timer-item set-left-border d-flex">
+        <p>min</p>
+        <p class="timer-day-number">10</p>
+      </section>
+      <!-- sec section -->
+      <section class="main-timer-item set-left-border d-flex">
+        <p>sec</p>
+        <p class="timer-day-number">10</p>
+      </section>
+      <!-- <section class="main-timer-item">Section1</section>
+      <section class="main-timer-item">Section1</section>
+      <section class="main-timer-item">Section1</section> -->
+    </section>
+  </body>
+</html>

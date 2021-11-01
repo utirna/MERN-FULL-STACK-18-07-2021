@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+      }
+      .item {
+        border: 1px solid black;
+      }
+
+      .one {
+        flex-basis: 30%;
+        height: 20vh;
+        /* order: 1;
+        flex-grow: 1; */
+      }
+      .two {
+        flex-basis: 20%;
+        /* height: 10vh; */
+        align-self: flex-end;
+        /* order: 2;
+        flex-grow: 1; */
+      }
+      .three {
+        flex-basis: 50%;
+        align-self: stretch;
+        /* order: 3;
+        flex-grow: 2; */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <article class="item one">Item-1</article>
+      <article class="item two">Item-2</article>
+      <article class="item three">Item-3</article>
+    </section>
+  </body>
+</html>
