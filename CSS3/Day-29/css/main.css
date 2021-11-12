@@ -1,0 +1,181 @@
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding-inline-start: 0;
+}
+
+:root {
+  --white-color: #fff;
+  --success-color: rgb(19, 183, 99);
+  --gray-color: gray;
+  --dot-size: 5px;
+  --primary-color: #044db5;
+}
+body {
+  font-family: roboto;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+nav li {
+  text-transform: capitalize;
+}
+
+/* flex class*/
+.flex {
+  display: flex;
+}
+.flex-fdc {
+  flex-direction: column;
+}
+.flex-warp {
+  flex-wrap: wrap;
+}
+.flex-jcc {
+  justify-content: center;
+}
+.flex-jcfe {
+  justify-content: flex-end;
+}
+.flex-jcsb {
+  justify-content: space-between;
+}
+.flex-aic {
+  align-items: center;
+}
+/* flex class end*/
+/*fonts*/
+.font-weight-bold {
+  font-weight: bold;
+}
+/* fonts end */
+/* button */
+.btn {
+  padding: 1rem;
+  background-color: transparent;
+  text-transform: capitalize;
+  border: 1px solid black;
+  transition: background-color 0.5s, color 0.5s;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+/*button end*/
+.test-border {
+  border: 1px solid red;
+}
+.main-header {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 0.2rem;
+}
+
+.marketing-menu {
+  padding: 0.4rem 1rem;
+}
+.marketing-menu > li {
+  padding: 0.2rem 1rem;
+}
+
+.nav-bar-main {
+  padding: 0 3rem;
+}
+.menu > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > li a {
+  align-items: flex-start;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar-main .main-logo {
+  width: 10vw;
+}
+
+.more-menu > li > button {
+  background-color: var(--success-color);
+  color: var(--white-color);
+  padding: 0.2rem 0.6rem;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.main-section {
+  height: 80vh;
+  background-color: rgb(210, 241, 255);
+  overflow: hidden;
+}
+.main-offer-brand-icon {
+  width: 40vw;
+}
+
+.main-offer-section {
+  width: 60vw;
+  padding-left: 6rem;
+}
+.main-offer-section > .offer-title {
+  font-size: 3rem;
+  padding: 0.4rem 0;
+}
+.main-offer-section > .offer-title span {
+  color: darkred;
+}
+.main-offer-section > .hurry {
+  font-size: 1.5rem;
+  color: var(--gray-color);
+}
+.main-offer-section > .key-features {
+  padding: 1rem 0;
+}
+.main-offer-section > .key-features > li {
+  width: 50%;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.main-offer-section > .key-features > li::before {
+  content: "";
+  width: var(--dot-size);
+  height: var(--dot-size);
+  display: inline-block;
+  background-color: red;
+  border-radius: var(--dot-size);
+  margin-right: 10px;
+}
+.main-offer-section > .offer-prices {
+  margin: 0.5rem 0;
+  color: var(--gray-color);
+}
+
+.main-offer-section > .buy-and-renew > span {
+  background-color: yellowgreen;
+}
+.main-offer-section > .buy-and-renew {
+  margin: 0.5rem 0;
+}
+.main-offer-section > .money-back {
+  color: var(--gray-color);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
