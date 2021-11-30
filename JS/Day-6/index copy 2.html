@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO</h1>
+
+    <script>
+      var varOne = 12;
+      var varTwo = 13;
+      var type = "abc";
+
+      mathOperations(varOne, varTwo, type);
+
+      function mathOperations(varOne, varTwo, type) {
+        var result = 0;
+        switch (type) {
+          case "add":
+            result = varOne + varTwo;
+            break;
+
+          case "mult":
+            result = varOne * varTwo;
+            break;
+
+          case "sub":
+            result = varOne - varTwo;
+            break;
+
+          case "div":
+            result = varOne / varTwo;
+            break;
+
+          default:
+            result = "invalid operation type";
+            break;
+        }
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

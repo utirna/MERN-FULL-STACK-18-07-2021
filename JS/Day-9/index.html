@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input-1" />
+    <button id="button">Add</button>
+    <ol id="student-list">
+      <li>No Student added</li>
+    </ol>
+
+    <script>
+      var studentList = document.getElementById("student-list");
+      var inputTwo = document.getElementById("input-1");
+      var button = document.getElementById("button");
+      var liList = "";
+
+      button.addEventListener("click", function () {
+        var studentName = input.value;
+        var _inputTwo = inputTwo.value;
+
+        liList += "<li>" + studentName + "</li>"; //2+3+2
+
+        studentList.innerHTML = liList;
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

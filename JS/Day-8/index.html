@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-8</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text">Hello</h1>
+
+    <span>This is a span</span>
+    <p class="text">This is a para</p>
+    <h1 id="admin-id">-</h1>
+
+    <button onclick="clickButton(this)" id="btn">CLICK</button>
+    <script>
+      var adminId = document.getElementById("admin-id"); //HTML element
+
+      function clickButton(_this) {
+        adminId.innerHTML = "Welcome Admin";
+        _this.innerText = "Clicked";
+      }
+    </script>
+  </body>
+</html>

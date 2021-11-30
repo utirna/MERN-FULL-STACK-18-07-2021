@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO</h1>
+
+    <script>
+      var studentDepartment = "it";
+      // mechanical,electrical,comp,civil
+
+      switch (studentDepartment) {
+        case "civil":
+          console.log("welcome to civil dept");
+          break;
+
+        case "mechanical":
+          console.log("welcome to mechanical dept");
+          break;
+
+        case "electrical":
+          console.log("welcome to electrical dept");
+          break;
+
+        case "comp":
+          console.log("welcome to comp dept");
+          break;
+
+        default:
+          console.log("invalid department");
+          break;
+      }
+
+      if (studentDepartment == "mechanical") {
+        console.log("welcome to mechanical dept");
+      } else {
+        if (studentDepartment == "electrical") {
+          console.log("welcome to electrical dept");
+        } else {
+          if (studentDepartment == "comp") {
+            console.log("welcome to comp dept");
+          } else {
+            if (studentDepartment == "civil") {
+              console.log("welcome to civil dept");
+            } else {
+              console.log("invalid department");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

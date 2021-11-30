@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO</h1>
+
+    <script>
+      var varNumber = 2;
+      var pie = 3.14;
+      var mulValue = 3;
+      // var result = (11 % varNumber == 0) ? "event" : "odd";
+      var result = 12 % varNumber;
+      if (result == 0) {
+        pie = pie + varNumber;
+        mulValue = mulValue * varNumber;
+        result = "even";
+      } else {
+        result = "odd";
+      }
+      console.log(result, pie, mulValue);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="productName" placeholder="enter product name" />
+    </div>
+    <div>
+      <input
+        type="number"
+        id="productPrice"
+        placeholder="enter product price"
+      />
+    </div>
+    <div>
+      <button id="addNewProduct">Save Product</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Sr no</th>
+          <th>Product Name</th>
+          <th>Product Prices</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="productLitsTbody"></tbody>
+    </table>
+    <script>
+      var productName = document.getElementById("productName");
+      var productPrice = document.getElementById("productPrice");
+      var btnSave = document.getElementById("addNewProduct");
+      var productLitsTbody = document.getElementById("productLitsTbody");
+      var trList = "";
+
+      btnSave.addEventListener("click", function () {
+        var _productName = productName.value;
+        var _productPrice = Number(productPrice.value);
+
+        trList += `<tr>
+                    <td>1</td>
+                    <td>${_productName}</td>
+                    <td>${_productPrice}</td>
+                    <td>
+                      <button>Delete</button>
+                    </td>
+                  </tr>`;
+
+        productLitsTbody.innerHTML = trList;
+        productName.value = "";
+        productPrice.value = "";
+      });
+    </script>
+  </body>
+</html>

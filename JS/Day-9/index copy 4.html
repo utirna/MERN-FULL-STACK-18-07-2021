@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input-1" />
+    <button class="button" data-btn="submit">CLICK</button>
+    <ol id="student-list">
+      <li>Rupesh</li>
+      <li>Rupesh</li>
+      <li>Rupesh</li>
+      <li>Rupesh</li>
+      <li>Rupesh</li>
+    </ol>
+
+    <script>
+      var adminName = document.getElementById("admin-name"); //HTML element
+      var buttons = document.getElementsByClassName("button");
+      var inputOne = document.getElementById("input-1");
+
+      for (var index in buttons) {
+        if (isNaN(index) == false)
+          buttons[index].addEventListener("click", function () {
+            adminName.innerHTML = inputOne.value;
+            inputOne.value = "";
+          });
+      }
+    </script>
+  </body>
+</html>

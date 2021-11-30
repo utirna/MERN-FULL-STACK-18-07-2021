@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HELLO</h1>
+
+    <script>
+      var varOne = 12;
+      var varTwo = 13;
+
+      function functionOne(callback) {
+        callback();
+      }
+
+      var varC = function () {
+        console.log("expression function");
+      };
+
+      functionOne(function () {
+        console.log("inline/callback function");
+      });
+    </script>
+  </body>
+</html>

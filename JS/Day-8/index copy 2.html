@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-8</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text">Hello</h1>
+
+    <span>This is a span</span>
+    <p class="text">This is a para</p>
+
+    <h1 id="admin-id">-</h1>
+    <script>
+      //DOM
+      //console.log(document);
+      //var hOneList = document.getElementsByTagName("h1");
+      //var list = document.getElementsByClassName("text");[]
+      var adminId = document.getElementById("admin-id"); //HTML element
+
+      setTimeout(function () {
+        adminId.innerHTML = "Welcome Admin";
+      }, 3 * 1000); // 1s == 1000ms*/
+
+      /* var length = list.length;
+
+      setTimeout(function () {
+        changeText();
+      }, 3 * 1000); // 1s == 1000ms*/
+
+      /*function changeText() {
+        for (var index = 0; index < length; index++) {
+          console.log(index);
+          var element = list[index];
+          element.innerHTML = "<span>Text Changed</span>";
+        }
+      }*/
+    </script>
+  </body>
+</html>

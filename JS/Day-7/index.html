@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1>Sample</h1>
+    <p>Hello HTML</p>
+
+    <script>
+      //DOM
+      //console.log(document);
+      var hOneList = document.getElementsByTagName("h1");
+      var para = document.getElementsByTagName("p");
+      var h1 = hOneList[1];
+      var p = para[0];
+
+      setTimeout(function () {
+        h1.innerHTML = "Admin";
+        p.innerHTML = "Hello JS";
+      }, 3000);
+    </script>
+  </body>
+</html>

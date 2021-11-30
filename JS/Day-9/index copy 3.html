@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text">Hello</h1>
+
+    <span>This is a span</span>
+    <p class="text">This is a para</p>
+    <h1 id="admin-id">-</h1>
+
+    <button class="button" data-btn="add">CLICK</button>
+    <button class="button" data-btn="edit">CLICK</button>
+    <button class="button" data-btn="delete">CLICK</button>
+    <button class="button" data-btn="print">CLICK</button>
+    <button class="button" data-btn="submit">CLICK</button>
+
+    <script>
+      var adminId = document.getElementById("admin-id"); //HTML element
+      var buttons = document.getElementsByClassName("button");
+
+      for (var index in buttons) {
+        if (isNaN(index) == false)
+          buttons[index].addEventListener("click", function () {
+            adminId.innerHTML = this.dataset.btn;
+          });
+      }
+    </script>
+  </body>
+</html>

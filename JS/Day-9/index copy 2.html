@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text">Hello</h1>
+
+    <span>This is a span</span>
+    <p class="text">This is a para</p>
+    <h1 id="admin-id">-</h1>
+
+    <button class="btn">CLICK</button>
+    <button class="btn">CLICK</button>
+    <button class="btn">CLICK</button>
+    <script>
+      var adminId = document.getElementById("admin-id"); //HTML element
+      var btn = document.getElementsByClassName("btn");
+
+      var btnLength = btn.length;
+
+      for (var index = 0; index < btnLength; index++) {
+        btn[index].addEventListener("click", function () {
+          adminId.innerHTML = "Welcome Admin";
+          this.innerText = "Clicked";
+          this.disabled = true;
+        });
+      }
+    </script>
+  </body>
+</html>

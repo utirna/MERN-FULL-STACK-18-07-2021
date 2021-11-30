@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      .text {
+      }
+      #admin-id {
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="input-1" placeholder="enter 1st number" />
+    <input type="number" id="input-2" placeholder="enter 2nd number" />
+    <div>
+      <button class="button" data-opt_type="add">Add</button>
+      <button class="button" data-opt_type="sub">Sub</button>
+      <button class="button" data-opt_type="mult">Mult</button>
+      <button class="button" data-opt_type="div">Div</button>
+      <button class="button" data-opt_type="mod">Modules</button>
+    </div>
+    <p>Result <span id="result-text"></span></p>
+    <script>
+      var inputOne = document.getElementById("input-1");
+      var inputTwo = document.getElementById("input-2");
+      var button = document.getElementsByClassName("button");
+      var resultText = document.getElementById("result-text");
+
+      for (const index in button) {
+        if (isNaN(index) === false) {
+          button[index].addEventListener("click", function () {
+            var _optType = this.dataset.opt_type;
+            var _valueOne = Number(inputOne.value);
+            var _valueTwo = Number(inputTwo.value);
+            var _result = calculations(_optType, _valueOne, _valueTwo);
+            resultText.innerHTML = result;
+          });
+        }
+      }
+      function calculations(_optType, _valueOne, _valueTwo) {
+        var _result = 0;
+        switch (_optType) {
+          case "add":
+            result = _valueOne + _valueTwo;
+            result = "of Add is:- " + result;
+            break;
+
+          case "sub":
+            result = _valueOne - _valueTwo;
+            result = "of Sub is:- " + result;
+            break;
+
+          case "mult":
+            result = _valueOne * _valueTwo;
+            result = "of Mult is:- " + result;
+            break;
+
+          case "div":
+            result = _valueOne / _valueTwo;
+            result = "of Div is:- " + result;
+            break;
+
+          case "mod":
+            result = _valueOne % _valueTwo;
+            result = "of modules is:- " + result;
+            break;
+        }
+        return _result;
+      }
+    </script>
+  </body>
+</html>
