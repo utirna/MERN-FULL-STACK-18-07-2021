@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+
+    <style>
+      .set-blink {
+        animation: blink 0.5s both infinite;
+      }
+      .changeText {
+        color: red;
+        background-color: "pink";
+      }
+      .changeText:hover {
+        animation: blink 0.5s both infinite;
+      }
+      @keyframes blink {
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+          opacity: 0;
+        }
+        0%,
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="btn">CLICK</button>
+      <button id="btn-remove">Remove CLICK</button>
+    </div>
+    <h1 id="text" class="changeText">HELLO</h1>
+    <script src="/js/common.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

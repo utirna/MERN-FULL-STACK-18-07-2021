@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-9</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var array = [
+        {
+          productName: "Lenovo",
+          productPrice: 12000,
+        },
+        {
+          productName: "Dell",
+          productPrice: 30000,
+        },
+        {
+          productName: "HP",
+          productPrice: 12000,
+        },
+        {
+          productName: "Asus",
+          productPrice: 30000,
+        },
+      ];
+
+      // array.shift();
+      // array.pop();
+      array.splice(3, 1);
+
+      console.log(array);
+    </script>
+  </body>
+</html>
