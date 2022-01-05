@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-2</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      class Circle {
+        constructor(_rad) {
+          this._radius = _rad;
+          this._dia = _rad * 2;
+        }
+
+        draw() {
+          console.log(this.radius);
+          console.log(this.dia);
+        }
+
+        static FunA() {
+          console.log("this is static method");
+        }
+
+        get radius() {
+          return this._radius;
+        }
+
+        get dia() {
+          return this._dia;
+        }
+
+        set radius(newValue) {
+          this._radius = newValue;
+          this._dia = newValue * 2;
+        }
+
+        //setters
+        //getters
+      }
+
+      var circleObj = new Circle(15);
+
+      circleObj.radius = 50;
+
+      circleObj.draw();
+      // Circle.FunA();
+    </script>
+  </body>
+</html>

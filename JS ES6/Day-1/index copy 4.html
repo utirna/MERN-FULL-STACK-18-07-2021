@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      var arrayOne = [10, 20];
+      var arrayThree = [10, 20];
+      var arrayTwo = [...arrayOne, ...arrayThree];
+
+      arrayOne[1] = 100;
+
+      console.log(arrayOne);
+      console.log(arrayTwo);
+    </script>
+  </body>
+</html>

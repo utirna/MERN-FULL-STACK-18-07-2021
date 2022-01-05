@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-15</title>
+  </head>
+  <body>
+    <script>
+      var studentList = [
+        {
+          name: "Suraj",
+          roll_no: 10,
+        },
+        {
+          name: "Suraj",
+          roll_no: 11,
+        },
+        {
+          name: "Rohit",
+          roll_no: 12,
+        },
+      ]; // object array
+      // var roll = 11;
+      //var sName = "Rohan";
+      // var result = studentList.find(function (student) {
+      //   return roll === student.roll_no && sName === student.name;
+      // });
+
+      var sName = "Suraj";
+      // var result = studentList.findIndex(function (student) {
+      //   return sName === student.name;
+      // });
+      var result = studentList.find(function (student) {
+        return sName === student.name;
+      });
+      console.log(result);
+    </script>
+  </body>
+</html>

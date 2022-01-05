@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-2</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      class Shape {
+        constructor(_shapeVal, type) {
+          this.shapeValue = _shapeVal;
+          this.type = type;
+        }
+
+        draw() {
+          console.log("circle is created:", this.shapeValue);
+        }
+      }
+
+      class Circle extends Shape {
+        constructor(_rad) {
+          super(_rad, "circle");
+        }
+
+        draw() {
+          console.log("this is child draw 1");
+        }
+
+        draw(value) {
+          console.log("this is child draw 2");
+        }
+      }
+
+      var circleObj = new Circle(15);
+      circleObj.draw();
+      circleObj.draw(2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      var schoolDetails = {
+        std: "5th",
+        roll: 10,
+      };
+
+      var studentDetails = {
+        address: "Pune",
+        mobile: "9874563214",
+      };
+
+      let studentSchool = { ...studentDetails, ...schoolDetails };
+      console.log(studentSchool);
+    </script>
+  </body>
+</html>

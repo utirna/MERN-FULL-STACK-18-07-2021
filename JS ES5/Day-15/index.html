@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-15</title>
+  </head>
+  <body>
+    <script>
+      var studentList = [
+        {
+          name: "Suraj",
+          roll_no: 10,
+          fees_pay: true,
+        },
+        {
+          name: "Suraj",
+          roll_no: 11,
+          fees_pay: true,
+        },
+        {
+          name: "Rohit",
+          roll_no: 12,
+          fees_pay: true,
+        },
+        {
+          name: "Ramesh",
+          roll_no: 12,
+          fees_pay: true,
+        },
+      ]; // object array
+
+      var sName = "Suraj1";
+
+      var result = studentList.filter(function (student) {
+        return student.fees_pay == false;
+      });
+      console.log(result);
+    </script>
+  </body>
+</html>

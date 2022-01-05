@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-15</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid black;
+      }
+      .text-success {
+        color: green;
+      }
+      .text-danger {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <select id="filterOption">
+      <option value="">All</option>
+      <option value="1">Paid</option>
+      <option value="0">Unpaid</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Student Name</th>
+          <th>Roll No</th>
+          <th>Fee Status</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td>1</td>
+          <td>Suraj</td>
+          <td>11</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var studentList = [
+        {
+          name: "Suraj",
+          roll_no: 10,
+          fees_pay: false,
+        },
+        {
+          name: "Ajay",
+          roll_no: 11,
+          fees_pay: true,
+        },
+        {
+          name: "Rohit",
+          roll_no: 12,
+          fees_pay: true,
+        },
+        {
+          name: "Ramesh",
+          roll_no: 13,
+          fees_pay: false,
+        },
+      ]; // object array
+
+      var tbody = document.getElementById("tbody");
+      var select = document.getElementById("filterOption");
+
+      select.addEventListener("change", function () {
+        var _value = this.value;
+        var _list = [];
+        switch (_value) {
+          case "1":
+            _list = studentList.filter(function (student) {
+              return student.fees_pay == true;
+            });
+            break;
+          case "0":
+            _list = studentList.filter(function (student) {
+              return student.fees_pay == false;
+            });
+            break;
+          default:
+            _list = studentList;
+            break;
+        }
+
+        printTable(tbody, _list);
+      });
+
+      function printTable(_tbody, list) {
+        _tbody.innerHTML = list
+          .map(function (student, index) {
+            var feeStatus =
+              student.fees_pay == true
+                ? `<span class="text-success">Yes</span>`
+                : `<span class="text-danger">No</span>`;
+
+            return `<tr>
+                    <td>${index + 1}</td>
+                    <td>${student.name}</td>
+                    <td>${student.roll_no}</td>
+                    <td>${feeStatus}</td>
+                  </tr>`;
+          })
+          .join("");
+      }
+
+      printTable(tbody, studentList);
+    </script>
+  </body>
+</html>

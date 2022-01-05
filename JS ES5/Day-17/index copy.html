@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-15</title>
+  </head>
+  <body>
+    <ul id="paidStudentList"></ul>
+    <script>
+      var paidStudentListID = document.getElementById("paidStudentList");
+      var studentList = [
+        {
+          name: "Suraj",
+          roll_no: 10,
+          fees_pay: false,
+        },
+        {
+          name: "Ajay",
+          roll_no: 11,
+          fees_pay: true,
+        },
+        {
+          name: "Rohit",
+          roll_no: 12,
+          fees_pay: true,
+        },
+        {
+          name: "Ramesh",
+          roll_no: 12,
+          fees_pay: false,
+        },
+      ]; // object array
+
+      // var result = studentList.filter(function (student) {
+      //   return student.fees_pay == false;
+      // });
+
+      var result = studentList
+        .map(function (student) {
+          return `<li>${student.name}</li>`;
+        })
+        .join("");
+
+      paidStudentListID.innerHTML = result;
+    </script>
+  </body>
+</html>

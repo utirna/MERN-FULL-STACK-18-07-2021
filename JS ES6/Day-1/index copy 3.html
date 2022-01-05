@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      var ul = document.getElementById("ul");
+      var numberArray = [10, 20, 30, 40, 50, 60];
+
+      numberArray = numberArray.filter((number) => {
+        return number !== 30;
+      });
+
+      ul.innerHTML = numberArray.map((number) => `<li>${number}</li>`).join("");
+    </script>
+  </body>
+</html>

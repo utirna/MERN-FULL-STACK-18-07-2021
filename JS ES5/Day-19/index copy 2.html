@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-18</title>
+  </head>
+  <body>
+    <button id="button">CLICK</button>
+    <ul id="ul-list"></ul>
+    <script>
+      //DOM
+      //XHR
+      //promise
+      //async await
+      //fetch
+      var button = document.getElementById("button");
+      var ul = document.getElementById("ul-list");
+
+      function checkStatus(status) {
+        return new Promise(function (resolve, reject) {
+          if (status === 200) {
+            resolve(status);
+          } else {
+            reject(`you are having a response error, kindly contact admin`);
+          }
+        });
+      }
+
+      async function printData(list) {
+        ul.innerHTML = list
+          .map(function (student) {
+            return `<li>${student.name}</li>`;
+          })
+          .join("");
+      }
+
+      async function getStudentList(url) {
+        try {
+          var response = await fetch(url);
+          await checkStatus(response.status);
+          var data = await response.json();
+          await printData(data.studentList);
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      button.addEventListener("click", function () {
+        getStudentList("/data.json");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-20</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid darkmagenta;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">CLICK</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody id="user-tbody">
+        <tr>
+          <td colspan="4">No User Found</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      //DOM
+      //XHR
+      //promise
+      //async await
+      //fetch
+      var user_tbody = document.getElementById("user-tbody");
+      var button = document.getElementById("button");
+
+      var base_url = "https://jsonplaceholder.typicode.com/";
+      var userList = [];
+
+      printData();
+
+      function checkStatus(status) {
+        return new Promise(function (resolve, reject) {
+          if (status === 200) {
+            resolve(status);
+          } else {
+            reject(`you are having a response error, kindly contact admin`);
+          }
+        });
+      }
+
+      async function printData() {
+        var _list = JSON.parse(localStorage.getItem("user_list"));
+
+        if (_list !== null) {
+          user_tbody.innerHTML = _list
+            .map(function (user, index) {
+              return `<tr>
+                      <td>${index + 1}</td>
+                      <td>${user.name}</td>
+                      <td>${user.email}</td>
+                      <td>${user.website}</td>
+                    </tr>`;
+            })
+            .join("");
+        }
+      }
+
+      async function getData(url) {
+        try {
+          var response = await fetch(url);
+          await checkStatus(response.status);
+          userList = await response.json();
+          localStorage.setItem("user_list", JSON.stringify(userList));
+          await printData();
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      button.addEventListener("click", function () {
+        var url = base_url.concat("users");
+
+        getData(url);
+      });
+    </script>
+  </body>
+</html>

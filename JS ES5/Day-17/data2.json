@@ -1,0 +1,24 @@
+{
+  "studentList": [
+    {
+      "name": "Suraj",
+      "roll_no": 10,
+      "fees_pay": false
+    },
+    {
+      "name": "Ajay",
+      "roll_no": 11,
+      "fees_pay": true
+    },
+    {
+      "name": "Rohit",
+      "roll_no": 12,
+      "fees_pay": true
+    },
+    {
+      "name": "Ramesh",
+      "roll_no": 13,
+      "fees_pay": false
+    }
+  ]
+}

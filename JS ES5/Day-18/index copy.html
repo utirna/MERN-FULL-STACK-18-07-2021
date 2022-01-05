@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-18</title>
+  </head>
+  <body>
+    <script>
+      //DOM
+      //XHR
+      //promise
+
+      function add(varOne, varTwo, callback) {
+        var _result = varOne + varTwo;
+        callback(_result);
+      }
+
+      function mult(varOne, varTwo, callback) {
+        var _result = varOne * varTwo;
+        callback(_result);
+      }
+
+      function div(varOne, varTwo, callback) {
+        var _result = varOne / varTwo;
+        callback(_result);
+      }
+
+      add(2, 3, function (addResult) {
+        console.log("add", addResult);
+
+        mult(addResult, 0, function (multResult) {
+          console.log("mult", multResult);
+
+          if (multResult == 0) {
+            console.log("cant divide by Zero");
+          } else {
+            div(10, multResult, function (divResult) {
+              console.log("div", divResult);
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

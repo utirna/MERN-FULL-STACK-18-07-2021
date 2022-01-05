@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-20</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid darkmagenta;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="id-h1"></h1>
+    <script>
+      var base_url = "https://jsonplaceholder.typicode.com/";
+      var userList = [];
+
+      function checkStatus(status) {
+        return new Promise(function (resolve, reject) {
+          if (status === 200) {
+            resolve(status);
+          } else {
+            reject(`you are having a response error, kindly contact admin`);
+          }
+        });
+      }
+
+      async function getData(url) {
+        try {
+          var response = await fetch(url);
+          await checkStatus(response.status);
+          userList = await response.json();
+
+          localStorage.setItem("user_list", JSON.stringify(userList));
+        } catch (error) {
+          alert(error);
+        }
+      }
+
+      var url = base_url.concat("users");
+      getData(url);
+    </script>
+  </body>
+</html>

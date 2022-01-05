@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-2</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      class Shape {
+        constructor(_shapeVal, type) {
+          this.shapeValue = _shapeVal;
+          this.type = type;
+        }
+
+        draw() {
+          switch (this.type) {
+            case "circle":
+              console.log("circle is created:", this.shapeValue);
+              break;
+            case "squire":
+              console.log("squire is created:", this.shapeValue);
+            default:
+              break;
+          }
+        }
+      }
+
+      class Circle extends Shape {
+        constructor(_rad) {
+          super(_rad, "circle");
+        }
+      }
+
+      class Squire extends Shape {
+        constructor(_val) {
+          super(_val, "squire");
+        }
+      }
+
+      class Spare extends Shape {
+        constructor(_val) {
+          super(_val, "spare");
+        }
+      }
+
+      var circleObj = new Circle(15);
+      circleObj.draw();
+
+      var squire = new Squire(10);
+      squire.draw();
+    </script>
+  </body>
+</html>

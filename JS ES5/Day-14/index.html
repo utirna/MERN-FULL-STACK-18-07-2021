@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-13</title>
+  </head>
+  <body>
+    <script>
+      // dates
+      // var dayList = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+      var userDate = "06-12-2020".split("-"); //dd-mm-yyyy   mm-dd-yyyy;
+
+      userDate = `${userDate[1]}-${userDate[0]}-${userDate[2]}`;
+
+      var date = new Date(userDate);
+      var output = date;
+      //date = date.toDateString().split(" ").join("-");
+      //output = dayList[date.getDay()];
+      //output = dayList[date.getDay()];
+      // output = date.getMilliseconds();
+      // date.setFullYear(2050);
+      console.log(output);
+    </script>
+  </body>
+</html>

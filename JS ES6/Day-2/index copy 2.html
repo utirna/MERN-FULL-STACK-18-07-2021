@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-2</title>
+  </head>
+  <ul id="ul"></ul>
+  <body>
+    <script>
+      class Circle {
+        radius = 10;
+
+        draw() {
+          console.log(this.radius);
+        }
+
+        static FunA() {
+          console.log("this is static method");
+        }
+      }
+
+      var circleObj = new Circle();
+      circleObj.draw();
+      Circle.FunA();
+    </script>
+  </body>
+</html>

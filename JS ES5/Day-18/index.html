@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-18</title>
+  </head>
+  <body>
+    <script>
+      //DOM
+      //XHR
+      //promise
+
+      function add(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          var _result = varOne + varTwo;
+          resolve(_result);
+        });
+      }
+
+      function mult(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          var _result = varOne * varTwo;
+          resolve(_result);
+        });
+      }
+
+      function div(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          if (varTwo == 0) {
+            reject("cant divide by zero");
+          } else {
+            var _result = varOne / varTwo;
+            resolve(_result);
+          }
+        });
+      }
+
+      //   add(2, 3)
+      //     .then(function (addResult) {
+      //       return div(addResult, 10);
+      //     })
+      //     .then(function (divResult) {
+      //       return mult(divResult, 5);
+      //     })
+      //     .then(function (result) {
+      //       console.log(result);
+      //     })
+      //     .catch(function (error) {
+      //       console.error(error);
+      //     });
+
+      async function calculation() {
+        try {
+          var result = await add(2, 3);
+          result = await div(result, 10);
+          result = await mult(result, 5);
+          console.log(result);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      calculation();
+    </script>
+  </body>
+</html>

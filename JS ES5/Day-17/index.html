@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-15</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid black;
+      }
+      .text-success {
+        color: green;
+      }
+      .text-danger {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="getData">Click To GET List</button>
+    <ul id="list"></ul>
+
+    <script>
+      var sList = [];
+      var ul = document.getElementById("list");
+      var button = document.getElementById("getData");
+
+      function ajax(method, url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4) {
+            callback(xhr);
+          }
+        };
+      }
+
+      button.addEventListener("click", function () {
+        ajax("GET", "/data.json", function (xhr) {
+          if (xhr.status == 200) {
+            var data = xhr.responseText; // string to json JSON
+            data = JSON.parse(data);
+            sList = data.studentList;
+            printData();
+          } else {
+            var text = xhr.status + " " + xhr.statusText;
+            alert(text);
+          }
+        });
+      });
+
+      function printData() {
+        var result = sList
+          .map(function (student) {
+            return `<li>${student.name}</li>`;
+          })
+          .join("");
+
+        ul.innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
